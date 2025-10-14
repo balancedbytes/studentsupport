@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing & Roommate Finder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='housing.css') }}">
+
+
+</head>
+<body>
+    <header>
+    <h2>NEU</h2>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="menu">
+        <a href="/home">Home</a>
+        <a href="/next_steps">My Dashboard</a>
+        <a href="/housing">Housing & Roommate</a>
+        <a href="/resources">Resources</a>
+        <a href="/logout">Logout</a>
+    </nav> 
+    </header>
+
+
+<main class="full">
+<div class="container-fluid py-5">
+    <h1 class="mb-4 text-center">Housing & Roommate Finder</h1>
+
+    
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h5 class="card-title">Housing Information</h5>
+            <p class="card-text">
+                Explore available dorms and housing options. 
+                For more details, visit the <a href="https://aday.neu.edu.tr/accommodation/?lang=en" target="_blank">NEU Housing Page</a>.
+            </p>
+        </div>
+    </div>
+
+    
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h5 class="card-title mb-3">Fill Out Your Preferences</h5>
+            <form method="POST" action="/save_preferences">
+                <div class="mb-3">
+                    <label for="cleanliness" class="form-label">Cleanliness – How clean and tidy is your living space?</label>
+                    <select class="form-select" id="cleanliness" name="cleanliness" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="study_habits" class="form-label">Study Habits – How quiet or social do you prefer your study environment?</label>
+                    <select class="form-select" id="study_habits" name="study_habits" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="Quiet">Quiet</option>
+                        <option value="Some Noise">Some Noise</option>
+                        <option value="Social">Social</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="sleep_schedule" class="form-label">Sleep Schedule – Are you an early, average, or late sleeper?</label>
+                    <select class="form-select" id="sleep_schedule" name="sleep_schedule" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="Early">Early</option>
+                        <option value="Average">Average</option>
+                        <option value="Late">Late</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="social_habits" class="form-label">Social Habits – How social or introverted are you at home?</label>
+                    <select class="form-select" id="social_habits" name="social_habits" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="Introvert">Introvert</option>
+                        <option value="Balanced">Balanced</option>
+                        <option value="Extrovert">Extrovert</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="noise_tolerance" class="form-label">Noise Tolerance – How much noise are you comfortable with?</label>
+                    <select class="form-select" id="noise_tolerance" name="noise_tolerance" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="guests" class="form-label">Guests – How often do you like to have visitors?</label>
+                    <select class="form-select" id="guests" name="guests" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="Rarely">Rarely</option>
+                        <option value="Sometimes">Sometimes</option>
+                        <option value="Often">Often</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="smoking_drinking" class="form-label">Smoking – Do you smoke?</label>
+                    <select class="form-select" id="smoking_drinking" name="smoking_drinking" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="No">No</option>
+                        <option value="Occasionally">Occasionally</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-custom w-100">Save Preferences</button>
+            </form>
+        </div>
+    </div>
+<div class="card shadow-sm mt-4">
+<div class="card-body text-center">
+    <h2 class="card-title">What’s Next?</h2>
+    <img src="{{ url_for('static', filename='roomiez.jpg') }}" alt="Photo by Cottonbro Stock project">
+    <p class="text-muted mb-0">
+    Save your preferences so we can tailor roommate suggestions for you.  
+    Once you’re done, continue by viewing your personalized roommate matches below.
+    </p>
+    
+</div>
+</div>
+
+
+    <div id="suggested-roommates" class="row g-4">
+    
+    </div>
+</div>
+
+<div class="text-center mt-4">
+<a href="/roommate_results" class="btn btn-custom">View Suggested Roommates</a>
+</div>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 NEU Student Hub. All rights reserved.</p>
+</footer>
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('menu');
+        nav.classList.toggle('active');}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

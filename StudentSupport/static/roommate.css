@@ -1,0 +1,81 @@
+
+
+body {
+    background: #f8f9fa;
+}
+
+.compatibility-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.compatibility-high { 
+    background: linear-gradient(135deg, #28a745, #20c997); 
+}
+
+.compatibility-medium { 
+    background: linear-gradient(135deg, #ffc107, #fd7e14); 
+}
+
+.compatibility-low { 
+    background: linear-gradient(135deg, #dc3545, #fd5c70); 
+}
+
+.roommate-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    height: 100%;
+}
+
+.roommate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.roommate-header {
+    background: linear-gradient(135deg, #800020, #a8324a);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.roommate-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.preference-match {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.chat-btn {
+    background: linear-gradient(135deg, #800020, #a8324a);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.chat-btn:hover {
+    background: linear-gradient(135deg, #a8324a, #c44569);
+    transform: scale(1.05);
+    text-decoration: none;
+}

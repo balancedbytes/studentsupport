@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+    <script>
+    function toggleMenu() {
+        const nav = document.getElementById('menu');
+        nav.classList.toggle('active');}
+</script>
+
+</head>
+<body>
+{% extends 'chatbot.html' %}
+
+{% block title %}Home - NEU{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+{% endblock %}
+
+{% block content %}
+    <header>
+    <h2>NEU</h2>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="menu">
+        <a href="/home">Home</a>
+        <a href="/next_steps">My Dashboard</a>
+        <a href="/housing">Housing & Roommate</a>
+        <a href="/resources">Resources</a>
+        <a href="/logout">Logout</a>
+    </nav> 
+    </header>
+
+<main class="full">
+    <h1>Congratulations, {{ fname }} {{ lname }}! Your journey at Near East University begins now.</h1>
+    <img src="{{ url_for('static', filename='welcom.jpeg') }}" alt="NEU Students" class="showUser">
+    <section class="checklist-section">
+        <p>
+            <strong>Congratulations on your admission!</strong> Your exciting journey at Near East University starts today. 
+            To help you get settled and make the most of your time on campus, we’ve prepared a personalized checklist covering everything 
+            from campus orientation, housing options, and academic resources, to student life and community involvement. 
+            <a href="/next_steps">Click here to view your Next Steps and Checklist</a> and start your NEU experience with confidence.
+        </p>
+    </section>
+<section class="cards-section">
+
+
+<a href="/nicosia" class="card-link">
+    <div class="card">
+    <img src="{{ url_for('static', filename='nicosia.jpg') }}" alt="Nicosia">
+    <h3>Lefkosia: Best University Town</h3>
+    <p>Discover what makes Lefkosia one of the most vibrant cities for students — cafes, culture, and convenience.</p>
+    </div>
+</a>
+
+
+<a href="https://neu.edu.tr/student-life/student-clubs/" class="card-link">
+    <div class="card">
+        <img src="{{ url_for('static', filename='clubs.jpg') }}" alt="Clubs & Organizations">
+        <h3>Clubs & Organizations</h3>
+        <p>Join student clubs, societies, and cultural groups.</p>
+    </div>
+</a>
+
+<a href="/housing" class="card-link">
+    <div class="card">
+        <img src="{{ url_for('static', filename='roomiez.jpg') }}" alt="Photo by Cottonbro Stock project">
+        <h3>Housing & Roommate Finder</h3>
+        <p>Explore dorm options and find your ideal dorm buddy with our personality-based matching tool.</p>
+    </div>
+</a>
+
+<a href="/resources" class="card-link">
+    <div class="card">
+        <img src="{{ url_for('static', filename='emergency.jpg') }}" alt="Emergency">
+        <h3>Resources</h3>
+        <p>Quick access to Resources, important contacts and safety resources on campus.</p>
+    </div>
+</a>
+
+</section>
+
+
+</main>
+<footer>
+    <p>&copy; 2025 NEU Student Hub. All rights reserved.</p>
+</footer>
+{% endblock %}
+
+</body>
+</html>

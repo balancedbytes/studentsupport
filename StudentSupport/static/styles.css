@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #800020;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    margin: 10px 20px;
+}
+
+header h2 {
+    font-size: 20px;
+}
+
+.hamburger {
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+
+nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    z-index: 100;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+nav.active {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: #800020;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #a8324a;
+    background-color: #f8f9fa;
+}
+
+main.login {
+    background-color: #ffffff;
+    width: 500px;
+    height: auto;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 30px;
+    text-align: center;
+}
+
+main.full {
+    width: 100% !important;
+    max-width: 1200px !important;
+    min-height: auto;
+    margin: 20px auto !important;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 20px;
+    display: block;
+    text-align: left;
+    background-color: transparent;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.full form {
+    align-items: flex-start;
+}
+
+main form input {
+    width: 90%;
+    border: 2px solid #800020;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+main form input:focus {
+    outline: none;
+    border-color: #a8324a;
+    box-shadow: 0 0 8px rgba(128,0,32,0.3);
+}
+
+main form button {
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #800020;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+main form button:hover {
+    background-color: #a8324a;
+}
+
+main p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: 10px 0;
+}
+
+main p a {
+    color: #800020;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main p a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    clear: both;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #800020;
+    color: white;
+    margin: 50px 20px 0 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* for bootsrap */
+.btn {
+    border-radius: 10px !important;
+    padding: 12px 20px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-control, .form-select {
+    border: 2px solid #800020 !important;
+    border-radius: 10px !important;
+    padding: 12px 15px !important;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #a8324a !important;
+    box-shadow: 0 0 8px rgba(128,0,32,0.3) !important;
+}
+
+.btn-custom {
+    background: linear-gradient(135deg, #800020, #a8324a);
+    border: none;
+    color: white;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(135deg, #a8324a, #c44569);
+    color: white;
+}
+
+.container, .container-fluid {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        margin: 10px 10px;
+    }
+    
+    footer {
+        margin: 50px 10px 0 10px;
+    }
+    
+    main.login {
+        width: 95%;
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    main form input,
+    main form button {
+        width: 100%;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+    nav {
+        top: 50px;
+        right: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main.full {
+        min-height: auto;
+        padding: 15px;
+        margin: 15px auto !important;
+    }
+    
+    .container, .container-fluid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='resources.css') }}">
+
+    
+</head>
+<body>
+    <header>
+        <h2>NEU</h2>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <nav id="menu">
+            <a href="/home">Home</a>
+            <a href="/next_steps">My Dashboard</a>
+            <a href="/housing">Housing & Roommate</a>
+            <a href="/resources" class="active">Resources</a>
+            <a href="/logout">Logout</a>
+        </nav> 
+    </header>
+
+    <main class="full">
+        <h1>Resources at Near East University</h1>
+        <p>Here you’ll find the essential services, facilities, and contacts to help you settle in and thrive during your time at NEU.</p>
+
+        <section class="resource-section">
+            <h2>Academic Support</h2>
+            <p>Students can access their courses, grades, and schedules through the <a href="https://neu.edu.tr/online-servisler/?lang=en" target="_blank">Student Information System (SIS)</a>. Academic advising is available in every faculty to help plan your degree path. NEU also offers the <a href="https://neu.edu.tr/near-east-university-einstein-student-information-systems-mobile-application-called-eindroid/?lang=en" target="_blank">EINDROID mobile app</a> for managing academic information on-the-go.</p>
+            <p>
+                The <a href="https://neu.edu.tr/academic/grand-library/?lang=en" target="_blank">Grand Library</a> at NEU is one of the largest in the Eastern Mediterranean, open 24/7. 
+                It holds over 2.25 million printed books, 60,000+ e-journals, 
+                and thousands of digital resources accessible worldwide.  
+                The library also provides quiet study halls, group workspaces, amphitheaters for academic events, 
+                and rare collections. Students can also use the Student Information System to access 
+                course materials, grades, and schedules. Academic advising services are available in every faculty to 
+                help plan your degree path.
+            </p>
+        </section>
+
+        <section class="resource-section">
+            <h2>Health & Wellness</h2>
+            <p>
+                <p>NEU provides a fully equipped <a href="https://neu.edu.tr/campus-life/health/?lang=en" target="_blank">hospital on campus</a>, providing general health, 
+                emergency services, and specialized care to students.  
+                A student health center offers check-ups, vaccinations, and medical guidance.  
+                Mental health and counseling services are available for personal, emotional, and academic support.  
+                Fitness and wellness are encouraged through the Olympic swimming pool, gyms, 
+                sports arenas, and walking paths on campus.
+            </p>
+        </section>
+
+        <section class="resource-section">
+            <h2>Campus Life</h2>
+            <p>
+                Campus life at NEU is vibrant and diverse. Students can choose from over 150 clubs 
+                and organizations covering culture, arts, sports, volunteering, and entrepreneurship. Learn more about clubs <a href="https://neu.edu.tr/campus-life/student-clubs/?lang=en" target="_blank">here</a>.
+                The campus includes cafeterias, restaurants, banks, supermarkets, post office, hairdressers, 
+                bookstores, and guesthouses for visitors.  
+                NEU also organizes regular events, including cultural festivals, concerts, conferences, 
+                and student fairs, ensuring that there is always something to take part in outside the classroom.
+            </p>
+        </section>
+
+        <section class="resource-section">
+            <h2>Technology & Learning Tools</h2>
+            <p>
+                Students have access to computer labs, high-speed campus Wi-Fi, and 
+                IT support desks to assist with technical issues.  
+                Online resources like the NEU Learning Management System allow students to 
+                download lecture notes, watch recorded sessions, and submit assignments digitally.  
+                The library’s digital portal allows remote access to academic journals, e-books, and research databases.  
+                Free software licenses are also provided for popular academic tools such as Microsoft Office.
+            </p>
+        </section>
+
+        <section class="resource-section">
+            <h2>Financial & Scholarships</h2>
+            <p>
+                NEU provides a wide range of scholarships, including 50% tuition waivers for all 
+                international students, as well as academic merit scholarships and sports scholarships.  
+                Payment plans are available to spread tuition across installments.  
+                Students may also apply for part-time on-campus jobs through the student affairs office. Guidance on financial aid, budgeting, and sponsorship programs is available through the Student Affairs Office. Learn more <a href="https://neu.edu.tr/students/?lang=en" target="_blank">here</a>.
+                Financial aid services are available for guidance on tuition payments, budgeting, and sponsorship programs.
+            </p>
+        </section>
+
+        <section class="resource-section">
+            <h2>Emergency & Safety</h2>
+            <p>
+                NEU maintains a 24/7 campus security team to ensure the safety of all students.  
+                Emergency services are directly connected with the NEU Hospital, which is located on campus.  
+                Students should save these contacts for urgent needs:
+            </p>
+            <ul>
+                <li>Campus Security (Emergency): +90 (392) 223 64 64</li>
+                <li>NEU Hospital: +90 (392) 680 20 00</li>
+                <li>General University Info: info@neu.edu.tr</li>
+            </ul>
+            <p>
+                For emergencies outside the university, Northern Cyprus has nationwide numbers:
+            </p>
+            <ul>
+                <li>General Emergency: 112</li>
+                <li>Police (Lefkoşa, Girne, Famagusta): 155</li>
+                <li>Fire Brigade: 199</li>
+                <li>Ambulance: 112</li>
+                <li>Forest Fire Hotline: 177</li>
+            </ul>
+            <p>
+                Fire stations and first-aid units are also located within the campus. In addition, the university 
+                regularly conducts safety drills and awareness workshops.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NEU Student Hub. All rights reserved.</p>
+    </footer>
+    <script>
+    function toggleMenu() {
+        const nav = document.getElementById('menu');
+        nav.classList.toggle('active');}
+    </script>
+</body>
+</html>

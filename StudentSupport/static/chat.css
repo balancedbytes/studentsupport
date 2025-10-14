@@ -1,0 +1,14 @@
+
+#messages { 
+    height: 60vh; 
+    overflow-y: auto; 
+    border: 1px solid #e5e7eb; 
+    padding: 1rem; 
+    background: #ffffff; 
+}
+
+.bubble { 
+    max-width: 70%; 
+    padding: .5rem .75rem; 
+    border-radius: .75rem; 
+}

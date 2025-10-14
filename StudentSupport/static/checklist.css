@@ -1,0 +1,170 @@
+
+body {
+    background: #f6f7fb;
+}
+
+.progress-card {
+    background: linear-gradient(135deg, #800020, #a8324a);
+    color: white;
+    border-radius: 15px;
+    padding: 32px 30px 30px 30px;
+    margin: 40px auto 32px auto;
+    max-width: 600px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.progress-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 28px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.1rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.93;
+}
+
+.progress-bar-container {
+    background: rgba(255,255,255,0.2);
+    border-radius: 25px;
+    height: 22px;
+    overflow: hidden;
+    margin: 24px 0 10px 0;
+    position: relative;
+}
+
+.progress-bar-fill {
+    background: linear-gradient(90deg, #28a745, #20c997);
+    height: 100%;
+    border-radius: 25px;
+    width: 0%;
+    transition: width 0.5s cubic-bezier(.4,2,.3,1);
+    position: relative;
+}
+
+.progress-percentage {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 12px;
+    letter-spacing: 1px;
+}
+
+.milestone-message {
+    background: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    padding: 18px;
+    margin-top: 18px;
+    font-weight: 700;
+    display: none;
+    animation: fadeIn 0.5s ease;
+    color: #fffbe7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    margin: 18px 0;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.accordion {
+    padding: 16px 22px;
+    background: #f8f9fa;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.08rem;
+    color: #800020;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+}
+
+.accordion:hover {
+    background: #e9ecef;
+}
+
+.accordion::after {
+    content: "▼";
+    margin-left: auto;
+    font-size: 1rem;
+    color: #a8324a;
+    transition: transform 0.3s;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: #fff;
+}
+
+.panel.active {
+    max-height: 300px;
+    padding: 20px;
+}
+
+.goal-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+    accent-color: #800020;
+    cursor: pointer;
+}
+
+.showUser {
+    display: block;
+    margin: 0 auto 32px auto;
+    max-width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+h1, h2 {
+    color: #800020;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.1rem;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+}
+
+section {
+    margin-bottom: 32px;
+}

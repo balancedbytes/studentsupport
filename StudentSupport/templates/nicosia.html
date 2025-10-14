@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h2>NEU</h2>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <nav id="menu">
+            <a href="/home">Home</a>
+            <a href="/next_steps">My Dashboard</a>
+            <a href="/housing">Housing & Roommate</a>
+            <a href="/resources">Resources</a>
+            <a href="/logout">Logout</a>
+        </nav> 
+    </header>
+
+<main class="full">
+        <section class="py-5 bg-light text-center">
+            <div class="container" style="max-width: 1200px;">
+                <h1 class="display-5 fw-bold">Lefkosia – The Heart of Student Life in Cyprus</h1>
+                <p class="lead text-muted">Discover why Nicosia is the perfect city for students – vibrant, safe, and full of opportunities.</p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container" style="max-width: 1200px;">
+                <div class="row g-4">
+                    <div class="col-lg-8 mx-auto">
+                        <article class="card shadow-sm p-4 rounded-4">
+                            <h2 class="mb-3">Why Lefkosia is the Best City for Students</h2>
+                            <p>
+                                Lefkosia (Nicosia), the capital of Cyprus, is more than just the island's cultural and 
+                                administrative hub. For students, it represents a unique blend of history, modern living, 
+                                and a welcoming community. From affordable living to vibrant social life, it's no surprise 
+                                that thousands of international students call Lefkosia home.
+                            </p>
+
+                            <h3 class="mt-4"> Cafés & Study Spots</h3>
+                            <p>
+                                The city is filled with cozy cafés where students can study, meet friends, or simply unwind. 
+                                Popular spots like <em>Mokka</em>, <em>Gloria Jean's</em>, and <em>To Pantopoleio</em> 
+                                are favorites for their Wi-Fi, quiet corners, and affordable drinks. Whether you prefer a 
+                                modern coffeehouse or a traditional Cypriot café, Lefkosia offers plenty of choices.
+                            </p>
+
+                            <h3 class="mt-4"> Things to Do</h3>
+                            <p>
+                                When you're not studying, there's no shortage of activities. Students can enjoy 
+                                exploring the old walled city with its charming streets, visiting museums like 
+                                the Cyprus Museum, or enjoying weekend markets and live music events. Nightlife 
+                                is also vibrant, with student-friendly bars and cultural festivals throughout the year.
+                            </p>
+
+                            <h3 class="mt-4"> Shopping & Lifestyle</h3>
+                            <p>
+                                Makarios Avenue and Ledra Street are at the heart of shopping in Lefkosia. From 
+                                international brands to local boutiques, students can find everything they need. 
+                                Affordable supermarkets, student discounts, and budget-friendly restaurants make 
+                                daily life convenient and cost-effective.
+                            </p>
+
+                            <h3 class="mt-4"> Safety & Community</h3>
+                            <p>
+                                One of the biggest advantages of living in Lefkosia is its safety. The city has 
+                                a reputation for being peaceful and student-friendly. Universities and local 
+                                communities often organize events, ensuring students feel welcome and connected.
+                            </p>
+
+                            <h3 class="mt-4"> Education & Opportunities</h3>
+                            <p>
+                                With several top universities and colleges, Lefkosia is a true education hub. 
+                                Students benefit from diverse academic programs, English-taught courses, and 
+                                career opportunities that extend beyond the classroom.
+                            </p>
+
+                            <h3 class="mt-4"> A City for Everyone</h3>
+                            <p>
+                                What sets Lefkosia apart is its balance – it's lively but not overwhelming, 
+                                affordable yet modern, and rooted in tradition while embracing diversity. 
+                                For students, it's the perfect environment to grow academically, socially, 
+                                and personally.
+                            </p>
+
+                            <p class="fw-bold mt-4 text-center" style="color: #800020; font-size: 1.1rem;">
+                                In short: Lefkosia isn't just a city to study in – it's a city to thrive in.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 NEU Student Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('menu');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
